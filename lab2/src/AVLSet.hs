@@ -8,7 +8,9 @@ module AVLSet
     filter',
     foldr'',
     foldl'',
-    toList
+    toList,
+    getMin,
+    height
 ) where
 
 import GHC.Generics (Generic)

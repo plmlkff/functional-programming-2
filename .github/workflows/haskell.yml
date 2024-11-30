@@ -31,8 +31,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: haskell-actions/setup@v2
-        with:
-          ghc-version: '9.6.6'
-          enable-stack: true
-          stack-version: 'latest'
       - run: cd lab2 && stack --no-terminal test --fast

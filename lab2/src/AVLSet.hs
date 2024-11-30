@@ -80,8 +80,8 @@ delete (Node v t u) d
     | v == d = Node mu t dmin
     | v > d && abs (balanceFactor $ Node v dt u) < 2 = Node v dt u
     | v < d && abs (balanceFactor $ Node v t du) < 2 = Node v t du
-    | v > d && balanceFactor $ Node v (left u) (right u) < 0 = balanceRR (Node v dt u) 
-    | v < d && balanceFactor $ Node v (left t) (right t) > 0 = balanceLL (Node v t du)
+    | v > d && (balanceFactor $ Node v (left u) (right u)) < 0 = balanceRR (Node v dt u) 
+    | v < d && (balanceFactor $ Node v (left t) (right t)) > 0 = balanceLL (Node v t du)
     | v > d = balanceRL (Node v dt u)
     | v < d = balanceLR (Node v t du)
         where dmin = delete u mu

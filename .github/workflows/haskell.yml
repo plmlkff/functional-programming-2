@@ -35,4 +35,4 @@ jobs:
           ghc-version: '9.6.6'
           enable-stack: true
           stack-version: 'latest'
-      - run: stack --no-terminal test --fast
+      - run: cd lab2 && stack --no-terminal test --fast
